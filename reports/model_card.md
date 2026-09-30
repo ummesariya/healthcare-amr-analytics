@@ -86,10 +86,40 @@ numeric preprocessing are applied consistently.
 
 ## 7. Data Splitting
 
-Patient-level splitting was used to reduce the risk of having records from the
-same patient appear in both training and evaluation datasets.
+Patient-level splitting was used in the primary model evaluation to reduce the risk of having records from the same patient appear in both training and evaluation datasets.
 
 A fixed random state was used for reproducibility.
+
+### Temporal Holdout Validation
+
+A separate chronological evaluation was performed to assess model performance on later records.
+
+The temporal design was:
+
+- **Training:** 2006–2021
+- **Validation:** 2022
+- **Final test:** 2023–2025
+
+The Logistic Regression model was trained using the 2006–2021 period.
+
+The decision threshold was selected using the 2022 validation period only. The selected threshold was **0.5948**.
+
+The threshold was then locked before evaluating the model on the 2023–2025 test period.
+
+Final temporal-test results:
+
+| Metric | Result |
+|---|---:|
+| Accuracy | 0.800 |
+| Precision | 0.367 |
+| Recall / Sensitivity | 0.626 |
+| F1-score | 0.463 |
+| Specificity | 0.828 |
+| ROC-AUC | 0.826 |
+| PR-AUC | 0.445 |
+| Brier score | 0.163 |
+
+This temporal evaluation provides an assessment on a later time period that was not used for model training or threshold selection. It should not be interpreted as external clinical validation.
 
 ## 8. Class Distribution
 

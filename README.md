@@ -137,9 +137,13 @@ Because resistant cases represented approximately 17% of the modeling dataset, m
 
 ## Model Results
 
+The project includes both a random test-set evaluation and a chronological temporal holdout evaluation.
+
+### Random Test-Set Evaluation
+
 The evaluated Logistic Regression model demonstrated a trade-off between sensitivity and false-positive rate.
 
-On the evaluated test set at the selected decision threshold:
+At the selected decision threshold:
 
 | Metric | Result |
 |---|---:|
@@ -154,7 +158,41 @@ On the evaluated test set at the selected decision threshold:
 
 These results are reported as observed model performance and should not be interpreted as clinical validation.
 
-The model is a portfolio/research demonstration and is **not intended for clinical decision-making**.
+### Temporal Holdout Evaluation
+
+A chronological evaluation was performed to assess performance on later records.
+
+The temporal design was:
+
+- **Training:** 2006–2021
+- **Validation:** 2022
+- **Final test:** 2023–2025
+
+The decision threshold was selected using the 2022 validation period only and then locked at **0.5948** before evaluation on the 2023–2025 test period.
+
+Final temporal-test performance:
+
+| Metric | 2023–2025 Test |
+|---|---:|
+| Accuracy | 0.800 |
+| Precision | 0.367 |
+| Recall / Sensitivity | 0.626 |
+| F1-score | 0.463 |
+| Specificity | 0.828 |
+| ROC-AUC | 0.826 |
+| PR-AUC | 0.445 |
+| Brier score | 0.163 |
+
+Temporal-test confusion matrix:
+
+| | Predicted Susceptible | Predicted Resistant |
+|---|---:|---:|
+| Actual Susceptible | 152,527 | 31,803 |
+| Actual Resistant | 11,000 | 18,420 |
+
+The temporal evaluation represents performance on a later time period that was not used for model training or threshold selection.
+
+These results are reported as observed model performance and should not be interpreted as clinical validation. The model is a portfolio/research demonstration and is **not intended for clinical decision-making**.
 
 ## Explainable AI
 
