@@ -171,6 +171,8 @@ Feature importance represents model behavior and association. It does **not esta
 
 ## Power BI Dashboard
 
+![Healthcare AMR Dashboard](reports/PowerBi/amr_dashboard.png)
+
 An interactive Power BI dashboard was developed to communicate AMR patterns.
 
 The dashboard includes:
