@@ -205,8 +205,8 @@ The application accepts patient and culture-related inputs and returns a model-g
 ## Key Insights from AMR Analysis
 
 - AMR rate observed at ~17% across dataset
-- Certain organisms (e.g., ESBL E. coli) show significantly higher resistance
-- Antibiotics such as Ampicillin and Tetracycline show higher resistance rates
+- Certain organisms (e.g., E. coli) show higher observed resistance rates
+- Some antibiotics, including Ampicillin and Tetracycline, show higher observed resistance rates
 - AMR trends show variation across years and patient demographics
 
 ## Skills Demonstrated
@@ -247,6 +247,7 @@ Important limitations include:
 - some potentially useful clinical variables are not available in the selected files
 - prior antibiotic exposure is not directly available in the selected dataset
 - the prediction task therefore cannot claim to represent every clinical risk factor
+- the exact clinical prediction point for some microbiology-derived variables requires careful interpretation because the selected files do not provide complete treatment-history or pre-test clinical context
 - class imbalance affects classification performance
 - threshold selection changes the precision/recall trade-off
 - temporal validation requires careful separation of training, threshold-selection, and final test periods
