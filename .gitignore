@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local model testing artifacts
+models/test_model.joblib
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.env
+
+# Large/raw datasets
+data/raw/
+
+# Generated/processed datasets
+data/processed/
