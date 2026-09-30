@@ -202,6 +202,22 @@ The project includes a Streamlit interface for demonstrating the trained AMR pre
 
 The application accepts patient and culture-related inputs and returns a model-generated AMR probability and predicted outcome. This interface is intended as a portfolio prototype and not for clinical decision-making.
 
+## Key Insights from AMR Analysis
+
+- AMR rate observed at ~17% across dataset
+- Certain organisms (e.g., ESBL E. coli) show significantly higher resistance
+- Antibiotics such as Ampicillin and Tetracycline show higher resistance rates
+- AMR trends show variation across years and patient demographics
+
+## Skills Demonstrated
+
+- Data Cleaning & Preprocessing (large healthcare dataset)
+- Feature Engineering (categorical encoding, temporal features)
+- Machine Learning (Logistic Regression, pipeline design)
+- Model Deployment (Streamlit)
+- Data Visualization (Power BI)
+- Version Control (Git, GitHub)
+
 ## Data Privacy and Ethics
 
 The source dataset is de-identified.
