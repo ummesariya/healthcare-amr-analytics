@@ -205,7 +205,23 @@ Model interpretation was performed using:
 
 Important features included variables related to culture type, antibiotic, organism, time, and demographic coding.
 
-Feature importance represents model behavior and association. It does **not establish causal relationships**.
+### SHAP Analysis
+
+Global SHAP analysis identified several features with relatively large contributions to the Logistic Regression model's predictions.
+
+Among the highest-ranked features were:
+
+- culture type, including respiratory and urine cultures
+- antibiotic categories such as Ampicillin, Ertapenem, Meropenem, and Tetracycline
+- order year
+- organisms including *Klebsiella pneumoniae*, *Staphylococcus aureus*, and *Escherichia coli*
+- additional antibiotic and demographic coding variables
+
+These rankings describe how the trained model used the available features when generating predictions. They should be interpreted as **model contributions or associations**, not as causal effects.
+
+Permutation importance was also used to assess how model performance changed when individual features were randomly permuted.
+
+Explainability results are intended to improve model transparency and support technical interpretation. They do not establish clinical causality or clinical validity.
 
 ## Power BI Dashboard
 
