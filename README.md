@@ -196,6 +196,12 @@ A Streamlit interface was developed to demonstrate how the saved machine learnin
 
 The application is intended as a technical demonstration rather than a clinical prediction system.
 
+The project includes a Streamlit interface for demonstrating the trained AMR prediction pipeline.
+
+![AMR Prediction Streamlit Application](reports/PowerBi/amr_prediction_app.png)
+
+The application accepts patient and culture-related inputs and returns a model-generated AMR probability and predicted outcome. This interface is intended as a portfolio prototype and not for clinical decision-making.
+
 ## Data Privacy and Ethics
 
 The source dataset is de-identified.
